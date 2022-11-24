@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 Spotkanie</title>
+</head>
+
+<body>
+    <form name="anagramForm" action="">
+        <input type="text" name="inputbox" value="">
+        <p></p>
+        <input type="button" name="button3" value="Click" onclick="handleAnagramForm(this.form)">
+    </form>
+    <div id="anagramResult"></div>
+</body>
+<script>
+
+    // compareTable = [];
+
+
+    // console.log(word1[0].charCodeAt(0));
+
+    // for (let i = 0; i < word1.length; i++) {
+    //     let toTest = word1[i].charCodeAt(0);
+    //     for (let k = 0; k < compareTable.length; k++) {
+    //         if (compareTable[k]) == toTest{
+
+    //         }
+    //     }
+    // }
+    
+    function handleAnagramForm(form) {
+        let toDisplay = form.inputbox.value;
+        document.getElementById("anagramResult").innerHTML = anagram(toDisplay);
+    }
+    function anagram(var1, var2) {
+        let word1 = [];
+        let flag = true;
+        word1 = var1.split('');
+        word2 = var2.split('');
+        word1 = word1.sort()
+        word2 = word2.sort()
+        var1 = var1 + "!";
+
+        if(word1.length != word2.length){
+            return false;
+        }
+
+        for (let i = 0; i < word1.sort().length; i++){
+            if(word1[i] == word2[i]){
+                flag = false;
+            }
+        }
+        return true;
+    }
+
+    console.log(anagram("Kotek", "Kotek"));
+</script>
+
+</html>
