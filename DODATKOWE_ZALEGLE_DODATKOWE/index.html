@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Zadanie na 15.11.2022</title>
+</head>
+<body bgcolor="gray">
+    <form>
+        <h2>Kalkulator</h2>
+        <select name="mode">
+            <option value="mod">Reszta z dzielenia</option>
+            <option value="pow">Potęgowanie</option>
+            <option value="log">Logarytm</option>
+        </select><br>
+        <output name="name1">Liczba 1:</output><br>
+        <input type="number" name="input1"><br>
+        <output name="name2">Liczba 2:</output><br>
+        <input type="number" name="input2"><br>
+        <input type="button" value="Oblicz" onclick="handleCalculator(this.form)"><br>
+        Wynik:<br>
+        <output name="result"></output>
+    </form>
+    <script src="myscript.js"></script>
+</body>
+</html>
